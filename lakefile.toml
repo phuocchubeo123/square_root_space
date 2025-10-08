@@ -1,0 +1,20 @@
+name = "square_root_space"
+version = "0.1.0"
+defaultTargets = ["square_root_space"]
+
+[[lean_lib]]
+name = "SquareRootSpace"
+
+[[lean_lib]]
+name = "Complexity"
+
+# Bring in the std4 library so that imports like `Std.Data.List.Basic` resolve.
+# The tag should match the Lean toolchain version when possible.
+[[require]]
+name = "batteries"
+git = "https://github.com/leanprover-community/batteries"
+rev = "v4.23.0"
+
+[[lean_exe]]
+name = "square_root_space"
+root = "Main"
